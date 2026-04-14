@@ -1,0 +1,269 @@
+/* Payment.css - Premium Modern Style for Admin Payments Page */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8 !important;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+    color: #1e293b;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.admin-container {
+    display: flex;
+    height: 100vh;
+    background: #f4f6f8;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(135deg, #22304a 80%, #2e3e5c 100%);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 2px 0 16px rgba(34, 48, 74, 0.10);
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    position: relative;
+    z-index: 2;
+    transition: box-shadow 0.2s;
+    overflow-y: scroll;
+}
+
+.sidebar-title {
+    text-align: center;
+    margin: 0 0 24px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    padding-bottom: 16px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    margin: 0;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 32px;
+    font-size: 1.08em;
+    letter-spacing: 0.5px;
+    transition: background 0.18s, padding-left 0.18s, color 0.18s, box-shadow 0.18s;
+    border-left: 4px solid transparent;
+    border-radius: 0 20px 20px 0;
+    font-weight: 700;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #1a2230;
+    border-left: 4px solid #4fc3f7;
+    color: #4fc3f7;
+    padding-left: 36px;
+    box-shadow: 2px 0 8px rgba(79, 195, 247, 0.10);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px 50px;
+    background: #f4f6f8;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.admin-header h1 {
+    margin-top: 0;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.admin-section {
+    margin-top: 24px;
+}
+
+.admin-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+    padding: 35px;
+    margin-bottom: 32px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.admin-card h3 {
+    margin: 0 0 24px;
+    font-size: 1.4em;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* Search Bar */
+.payment-search-bar {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 350px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1.5px solid #e2e8f0;
+    font-size: 1em;
+    background: #f8fafc;
+    transition: all 0.2s;
+    font-family: inherit;
+    font-weight: 500;
+    color: #334155;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #0d9488;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+}
+
+.search-btn {
+    background: #0d9488;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 30px;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+    font-family: inherit;
+}
+
+.search-btn:hover {
+    background: #0f766e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 148, 136, 0.3);
+}
+
+.reset-btn {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-weight: 700;
+    font-size: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.reset-btn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+/* Table Styles */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.payment-table th,
+.payment-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.payment-table th {
+    background: #f8fafc;
+    font-weight: 700;
+    color: #475569;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payment-table tr {
+    transition: background 0.15s;
+}
+
+.payment-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.payment-table td {
+    font-size: 1em;
+    color: #1e293b;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.payment-id {
+    font-family: monospace;
+    color: #64748b;
+    font-size: 1.1em;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.paid,
+.status-badge.completed,
+.status-badge.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.failed,
+.status-badge.cancelled,
+.status-badge.rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Use native browser scrollbars matching the rest of the Admin portal */

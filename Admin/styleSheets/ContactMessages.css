@@ -1,0 +1,231 @@
+
+.message-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+    margin-bottom: 15px;
+}
+
+.message-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.message-user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.message-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.message-user-details h3 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.message-user-details p {
+    margin: 3px 0 0;
+    color: #718096;
+    font-size: 14px;
+}
+
+.message-date-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.message-actions {
+    text-align: right;
+}
+
+.message-actions button {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 5px;
+    transition: opacity 0.2s;
+}
+
+.message-actions button:hover {
+    opacity: 0.8;
+}
+
+.btn-view {
+    background: #4299e1;
+    color: white;
+}
+
+.btn-delete {
+    background: #f56565;
+    color: white;
+}
+
+.message-content {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.message-content p {
+    margin: 0;
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.pagination-info {
+    margin-bottom: 20px;
+    color: #718096;
+}
+
+.pagination-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination-controls a {
+    background: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.pagination-controls a:hover {
+    background: #5568d3;
+}
+
+.page-info {
+    color: #718096;
+    font-weight: 500;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-state-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    color: #4a5568;
+    margin: 0 0 10px;
+}
+
+.empty-state p {
+    color: #718096;
+    margin: 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #2d3748;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #718096;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: #2d3748;
+}
+
+.modal-body {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-body p {
+    margin: 0;
+    color: #4a5568;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}

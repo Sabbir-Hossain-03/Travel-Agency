@@ -1,0 +1,29 @@
+[
+    {
+        "id": 2,
+        "username": "lena",
+        "email": "lena@example.com",
+        "role": "customer",
+        "status": "active",
+        "created": "2025-02-03",
+        "password_hash": ""
+    },
+    {
+        "id": 3,
+        "username": "mike",
+        "email": "mike@example.com",
+        "role": "customer",
+        "status": "inactive",
+        "created": "2025-03-22",
+        "password_hash": ""
+    },
+    {
+        "id": 4,
+        "username": "m",
+        "email": "m@gmail.com",
+        "role": "admin",
+        "status": "active",
+        "created": "2025-12-26",
+        "password_hash": "$2y$10$Xqgarl3EjaQpRXsfO3xrre2f3Yz.ZOpqHIdP.EfPZWSAq0nnJmStO"
+    }
+]

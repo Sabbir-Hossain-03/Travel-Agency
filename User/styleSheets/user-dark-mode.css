@@ -1,0 +1,279 @@
+/* user-dark-mode.css - Dark Mode for Avestra User Panel */
+
+:root[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-bg: #1e293b;
+    --input-bg: #334155;
+}
+
+body.dark-mode {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Navbar Dark Mode */
+body.dark-mode .navbar {
+    background: rgba(15, 23, 42, 0.9) !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .nav-left .brand-name {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-right a {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .nav-right a:not(.logout):hover {
+    color: #00ADB5;
+    background: rgba(0, 173, 181, 0.15);
+}
+
+body.dark-mode .nav-right a.active {
+    color: #00ADB5;
+    background: rgba(0, 173, 181, 0.2);
+}
+
+/* Profile Page Dark Mode */
+body.dark-mode .profile-container {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .profile-avatar {
+    border-color: var(--bg-secondary);
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .upload-btn {
+    border-color: var(--bg-secondary);
+}
+
+body.dark-mode .profile-user-info h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .profile-info-row label {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .profile-info-row input {
+    background-color: var(--input-bg);
+    border-color: var(--border-color);
+    color: #ffffff;
+}
+
+body.dark-mode .profile-info-row input:focus {
+    border-color: #00ADB5;
+    background-color: #2d3748;
+}
+
+body.dark-mode .profile-info-row input[readonly],
+body.dark-mode #user_theme_select {
+    background-color: var(--input-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    color: #ffffff !important;
+    padding: 14px 16px;
+    border-radius: 12px;
+}
+
+body.dark-mode #user_theme_select option {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+}
+
+/* Message Styles Dark Mode */
+body.dark-mode .message.success {
+    background-color: rgba(16, 185, 129, 0.1) !important;
+    color: #10b981 !important;
+    border-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+body.dark-mode .message.error {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    color: #ef4444 !important;
+    border-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+body.dark-mode .modal-content {
+    background: var(--bg-secondary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .modal-content h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .modal-content p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .btn-cancel {
+    background: #334155;
+    color: #f8fafc;
+}
+
+body.dark-mode .btn-cancel:hover {
+    background: #475569;
+}
+
+/* Footer Dark Mode */
+body.dark-mode .footer {
+    background: var(--bg-secondary) !important;
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--border-color) !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode footer a {
+    color: #00ADB5 !important;
+}
+
+body.dark-mode footer .footer-social a {
+    background: rgba(255, 255, 255, 0.05);
+    color: #00ADB5;
+}
+
+body.dark-mode footer .footer-social a:hover {
+    background: #00ADB5;
+    color: #fff;
+}
+
+/* Invoice Page Dark Mode */
+body.dark-mode .invoice-container {
+    background: rgba(30, 41, 59, 0.95) !important;
+    border-color: rgba(0, 188, 212, 0.3) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .invoice-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .invoice-header h2 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .invoice-id {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #cbd5e0 !important;
+}
+
+body.dark-mode .invoice-section {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark-mode .invoice-section h3 {
+    color: #00bcd4 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .invoice-details p,
+body.dark-mode .invoice-section p {
+    color: #cbd5e0 !important;
+}
+
+body.dark-mode .invoice-details p b,
+body.dark-mode .invoice-section p b {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .invoice-status {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .invoice-status div {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .invoice-status p span[style*="color:#1976d2"] {
+    background: rgba(2, 132, 199, 0.2) !important;
+}
+
+body.dark-mode .invoice-status p span[style*="color:#43a047"] {
+    background: rgba(5, 150, 105, 0.2) !important;
+}
+
+/* Payment Page Dark Mode */
+body.dark-mode .payment-container {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .payment-title {
+    color: #00bcd4 !important;
+}
+
+body.dark-mode .payment-summary {
+    background: rgba(67, 160, 71, 0.1) !important;
+    border-left-color: #43a047 !important;
+    color: #a5d6a7 !important;
+}
+
+body.dark-mode .payment-form label {
+    color: #cbd5e0 !important;
+}
+
+body.dark-mode .payment-form input,
+body.dark-mode .payment-form select {
+    background: var(--input-bg) !important;
+    border-color: var(--border-color) !important;
+    color: #ffffff !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    body.dark-mode .profile-container {
+        border: none;
+    }
+}
+
+/* Dashboard Dark Mode */
+body.dark-mode .dash-card {
+    background: #1e293b !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .dash-card h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .dash-card p {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .dash-card:hover {
+    background: #2d3748 !important;
+}
+
+body.dark-mode .card-tickets {
+    --card-light-bg: rgba(49, 130, 206, 0.15);
+}
+
+body.dark-mode .card-hotels {
+    --card-light-bg: rgba(56, 161, 105, 0.15);
+}
+
+body.dark-mode .card-tours {
+    --card-light-bg: rgba(214, 158, 46, 0.15);
+}
+
+body.dark-mode .card-history {
+    --card-light-bg: rgba(128, 90, 213, 0.15);
+}
+
+body.dark-mode .dash-icon-wrap {
+    background: var(--card-light-bg) !important;
+}

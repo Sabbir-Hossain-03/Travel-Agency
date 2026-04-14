@@ -1,0 +1,332 @@
+:root {
+    --dark-bg: #222831;
+    --mid-bg: #393E46;
+    --accent: #00ADB5;
+    --light-bg: #EEEEEE;
+    --surface: #FFFFFF;
+    --text: #222831;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--light-bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-container {
+    background: var(--surface);
+    padding: 28px 22px 22px 22px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+.signup-container h2 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.signup-form .form-group {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.signup-form label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 0.95em;
+    pointer-events: none;
+    background: transparent;
+    padding: 0;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+    z-index: 5;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form input[type="phoneNumber"] {
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 1em;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.signup-form input[title]:hover {
+    border-color: var(--accent);
+}
+
+
+.signup-form input::placeholder {
+    color: var(--text);
+    opacity: 0.7;
+}
+
+.signup-form input:focus::placeholder,
+.signup-form input:not(:placeholder-shown)::placeholder {
+    color: transparent;
+}
+
+/* Float label */
+.signup-form input:focus+label,
+.signup-form input:not(:placeholder-shown)+label {
+    top: -12px;
+    font-size: 0.8em;
+    background: var(--surface);
+    padding: 2px 6px;
+    left: 8px;
+    z-index: 15;
+}
+
+.signup-form input:focus {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.2);
+    outline: none;
+}
+
+.signup-form select {
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--accent);
+    font-size: 1em;
+    font-weight: bold;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.signup-container .success-message,
+.signup-container .general-error-message {
+    width: 100%;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.signup-form .select-group label {
+    position: static;
+    display: block;
+    margin-bottom: 6px;
+    padding: 0;
+    background: transparent;
+}
+
+.signup-form select:focus {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.2);
+    outline: none;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 9px;
+    background: var(--accent);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.signup-form button:hover {
+    background: var(--light-bg);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.signup-footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+.signup-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    background: var(--dark-bg);
+    color: var(--light-bg);
+}
+
+body.dark-mode .signup-container {
+    background: var(--mid-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    color: var(--light-bg);
+}
+
+body.dark-mode .signup-form input[type="text"],
+body.dark-mode .signup-form input[type="email"],
+body.dark-mode .signup-form input[type="password"],
+body.dark-mode .signup-form input[type="phoneNumber"] {
+    background: var(--dark-bg);
+    border: 1px solid var(--accent);
+    color: var(--light-bg);
+}
+
+body.dark-mode .signup-form input::placeholder {
+    color: var(--light-bg);
+    opacity: 0.6;
+}
+
+body.dark-mode .signup-form input:focus::placeholder,
+body.dark-mode .signup-form input:not(:placeholder-shown)::placeholder {
+    color: transparent;
+}
+
+body.dark-mode .signup-form label {
+    color: var(--accent);
+}
+
+body.dark-mode .signup-form input:focus+label,
+body.dark-mode .signup-form input:not(:placeholder-shown)+label {
+    background: var(--mid-bg);
+}
+
+body.dark-mode .signup-form select {
+    background: var(--dark-bg);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+body.dark-mode .signup-form input:focus {
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 173, 181, 0.25);
+}
+
+body.dark-mode .signup-footer {
+    color: var(--light-bg);
+}
+
+/* General error message styles */
+.general-error-message {
+    color: #d32f2f !important;
+    background-color: rgba(211, 47, 47, 0.15);
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.6s ease;
+}
+
+body.dark-mode .general-error-message {
+    color: #ff5252 !important;
+    background-color: rgba(255, 82, 82, 0.2);
+}
+
+/* Error message styles */
+span.error-message {
+    color: #d32f2f !important;
+    background-color: rgba(211, 47, 47, 0.15);
+    font-size: 0.85em;
+    margin-top: 6px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: block;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+body.dark-mode span.error-message {
+    color: #ff5252 !important;
+    background-color: rgba(255, 82, 82, 0.2);
+}
+
+.form-group input.error,
+.form-group select.error {
+    border-color: #d32f2f !important;
+    background-color: rgba(211, 47, 47, 0.05);
+}
+
+body.dark-mode .form-group input.error,
+body.dark-mode .form-group select.error {
+    border-color: #ff5252 !important;
+    background-color: rgba(255, 82, 82, 0.1);
+}
+
+/* Success message (inline, below heading) */
+.success-message {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.6s ease;
+}
+
+body.dark-mode .success-message {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.3);
+    color: #92d192;
+}
+
+/* (Legacy) .success-message-top removed in favor of inline .success-message */
+
+/* Responsive styles for mobile */
+@media (max-width: 300px) {
+    .signup-container {
+        padding: 24px 8px 18px 8px;
+        max-width: 98vw;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"],
+    .signup-form input[type="tel"],
+    .signup-form select {
+        font-size: 1em;
+        padding: 10px 8px;
+    }
+
+    .signup-form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}

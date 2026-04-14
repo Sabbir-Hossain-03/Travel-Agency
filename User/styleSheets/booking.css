@@ -1,0 +1,79 @@
+/* booking.css - Styles for the booking page */
+
+.booking-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.booking-title {
+    font-size: 2rem;
+    color: #1e88e5;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #1e88e5;
+    outline: none;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.booking-form button:hover {
+    background: #1565c0;
+}
+
+.booking-summary {
+    background: #f1f8e9;
+    border-left: 4px solid #43a047;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    color: #33691e;
+}
+
+@media (max-width: 600px) {
+    .booking-container {
+        padding: 16px 6px;
+    }
+    .booking-title {
+        font-size: 1.3rem;
+    }
+}

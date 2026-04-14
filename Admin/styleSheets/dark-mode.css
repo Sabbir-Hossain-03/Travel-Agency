@@ -1,0 +1,240 @@
+/*
+ * =============================================================
+ *  AVESTRA ADMIN - DARK MODE
+ *  Included on every Admin page via <link rel="stylesheet">
+ *  Applied when <body> has the class "dark-mode"
+ * =============================================================
+ */
+
+/* ── Base ─────────────────────────────────────────────────── */
+html.dark-mode,
+body.dark-mode {
+    background: #0f1117 !important;
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode .admin-container {
+    background: #0f1117 !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+body.dark-mode .sidebar {
+    background: linear-gradient(135deg, #161b22 80%, #1c2431 100%) !important;
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .sidebar-title {
+    color: #e6edf3 !important;
+}
+
+body.dark-mode .sidebar-menu a {
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode .sidebar-menu a:hover,
+body.dark-mode .sidebar-menu a.active {
+    background: #0d1117 !important;
+    border-left-color: #58a6ff !important;
+    color: #58a6ff !important;
+}
+
+/* ── Main content ─────────────────────────────────────────── */
+body.dark-mode .main-content {
+    background: #0f1117 !important;
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode .admin-header h1,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #e6edf3 !important;
+}
+
+body.dark-mode .admin-header p,
+body.dark-mode p,
+body.dark-mode .subtitle {
+    color: #8b949e !important;
+}
+
+/* ── Cards ────────────────────────────────────────────────── */
+body.dark-mode .admin-card,
+body.dark-mode .report-card,
+body.dark-mode .stat-card {
+    background: #161b22 !important;
+    border: 1px solid #30363d !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .stat-box {
+    background: linear-gradient(135deg, #1c2431 80%, #1e2d40 100%) !important;
+    border: 1px solid #30363d !important;
+}
+
+body.dark-mode .stat-label {
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode .stat-number {
+    color: #58a6ff !important;
+}
+
+body.dark-mode .stat-info .stat-label {
+    color: #8b949e !important;
+}
+
+/* ── Tables ───────────────────────────────────────────────── */
+body.dark-mode table,
+body.dark-mode .payment-table,
+body.dark-mode .report-table {
+    background: #161b22 !important;
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode table th,
+body.dark-mode .payment-table th,
+body.dark-mode .report-table th {
+    background: #1c2431 !important;
+    color: #8b949e !important;
+    border-bottom-color: #30363d !important;
+}
+
+body.dark-mode table td,
+body.dark-mode .payment-table td,
+body.dark-mode .report-table td {
+    border-bottom-color: #21262d !important;
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode table tbody tr:hover,
+body.dark-mode .payment-table tbody tr:hover {
+    background: #1c2431 !important;
+}
+
+/* ── Inputs & Selects ─────────────────────────────────────── */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="search"],
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #0d1117 !important;
+    border-color: #30363d !important;
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #484f58 !important;
+}
+
+/* ── Status badges ────────────────────────────────────────── */
+body.dark-mode .status-badge.pending {
+    background: #2d2a1e !important;
+    color: #e3b341 !important;
+}
+
+body.dark-mode .status-badge.paid,
+body.dark-mode .status-badge.success,
+body.dark-mode .status-badge.completed {
+    background: #1e3a2a !important;
+    color: #3fb950 !important;
+}
+
+body.dark-mode .status-badge.failed,
+body.dark-mode .status-badge.rejected,
+body.dark-mode .status-badge.cancelled {
+    background: #3a1e1e !important;
+    color: #f85149 !important;
+}
+
+/* ── Alerts ───────────────────────────────────────────────── */
+body.dark-mode .alert-success {
+    background: #1e3a2a !important;
+    color: #3fb950 !important;
+    border-color: #3fb950 !important;
+}
+
+body.dark-mode .alert-error {
+    background: #3a1e1e !important;
+    color: #f85149 !important;
+    border-color: #f85149 !important;
+}
+
+/* ── Search/filter bar ────────────────────────────────────── */
+body.dark-mode .payment-search-bar,
+body.dark-mode .search-bar,
+body.dark-mode form[method="GET"],
+body.dark-mode form[method="POST"] input,
+body.dark-mode form[method="POST"] select {
+    background: transparent;
+}
+
+/* ── Pagination ───────────────────────────────────────────── */
+body.dark-mode .pagination a,
+body.dark-mode .pagination span,
+body.dark-mode .bh-page-btn {
+    background: #161b22 !important;
+    color: #c9d1d9 !important;
+    border-color: #30363d !important;
+}
+
+body.dark-mode .pagination a:hover,
+body.dark-mode .bh-page-btn:hover {
+    background: #1c2431 !important;
+}
+
+/* ── Settings page specifics ──────────────────────────────── */
+body.dark-mode .settings-section,
+body.dark-mode .settings-card {
+    background: #161b22 !important;
+    border-color: #30363d !important;
+}
+
+body.dark-mode .settings-label,
+body.dark-mode label {
+    color: #c9d1d9 !important;
+}
+
+/* ── Profile page specifics ───────────────────────────────── */
+body.dark-mode .profile-card,
+body.dark-mode .profile-form,
+body.dark-mode .cover-banner {
+    background: #161b22 !important;
+}
+
+body.dark-mode .profile-role {
+    color: #ffffff !important;
+}
+
+body.dark-mode .profile-status {
+    color: #4ade80 !important;
+}
+
+/* ── Table-wrapper / scrollable wrappers ──────────────────── */
+body.dark-mode .table-wrapper {
+    background: #161b22 !important;
+    border-color: #30363d !important;
+}
+
+/* ── Verification / OTP specifics ─────────────────────────── */
+body.dark-mode .otp-digit {
+    background: #0d1117 !important;
+    border-color: #30363d !important;
+    color: #c9d1d9 !important;
+}
+
+body.dark-mode .otp-digit:focus {
+    border-color: #58a6ff !important;
+    background: #161b22 !important;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15) !important;
+}
+
+body.dark-mode .signup-container h2 {
+    color: #e6edf3 !important;
+}
+
+body.dark-mode .signup-container p {
+    color: #8b949e !important;
+}

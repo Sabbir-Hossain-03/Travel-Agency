@@ -1,0 +1,70 @@
+/* tickets.css - Real-world modern style for tickets page */
+
+.tickets-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(25,118,210,0.10);
+    padding: 36px 28px 28px 28px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.tickets-title {
+    font-size: 2rem;
+    color: #1976d2;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    background: #fafafa;
+}
+
+.tickets-table th, .tickets-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tickets-table th {
+    background: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+.tickets-table tr:hover {
+    background: #f1f8e9;
+}
+
+.tickets-table a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.tickets-table a:hover {
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .tickets-container {
+        padding: 12px 2px;
+    }
+    .tickets-title {
+        font-size: 1.3rem;
+    }
+    .tickets-table th, .tickets-table td {
+        font-size: 0.95rem;
+        padding: 8px 4px;
+    }
+}

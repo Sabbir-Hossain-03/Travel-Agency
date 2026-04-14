@@ -1,0 +1,492 @@
+/* ===============================
+   Manage Tours (Hotels-like UI)
+   =============================== */
+:root{
+  --navy:#22304a;
+  --navy2:#1a2230;
+  --blue:#2f5fd0;         /* card header blue like screenshot */
+  --blue2:#204eb8;
+  --sky:#4fc3f7;
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --border:#e4e9f4;
+  --muted:#6c7a90;
+
+  --success:#18b26b;
+  --success-bg:#e7fbf2;
+
+  --danger:#e53935;
+  --danger-bg:#ffeaea;
+
+  --warn:#f39c12;
+  --warn-bg:#fff2dd;
+
+  --shadow: 0 14px 40px rgba(34,48,74,.12);
+  --shadow2: 0 10px 28px rgba(34,48,74,.10);
+
+  --r12:12px;
+  --r16:16px;
+  --r18:18px;
+}
+
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--navy);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.admin-container{
+  display:flex;
+  height:100vh;
+}
+
+/* ===============================
+   Sidebar (keep your theme)
+   =============================== */
+.sidebar{
+  width:240px;
+  background: linear-gradient(135deg, #22304a 80%, #2e3e5c 100%);
+  color:#fff;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 2px 0 16px rgba(34,48,74,.12);
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  position: sticky;
+  top:0;
+  overflow-y:auto;
+}
+
+.sidebar-title {
+    text-align: center;
+    margin: 0 0 24px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    padding-bottom: 16px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar-menu li {
+    margin: 0;
+}
+
+.sidebar-menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 32px;
+    font-size: 1.08em;
+    letter-spacing: 0.5px;
+    transition: background 0.18s, padding-left 0.18s, color 0.18s, box-shadow 0.18s;
+    border-left: 4px solid transparent;
+    border-radius: 0 20px 20px 0;
+    font-weight: 700;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #1a2230;
+    border-left: 4px solid #4fc3f7;
+    color: #4fc3f7;
+    padding-left: 36px;
+    box-shadow: 2px 0 8px rgba(79, 195, 247, 0.10);
+}
+
+/* ===============================
+   Main Content
+   =============================== */
+.main-content{
+  flex:1;
+  padding: 34px 34px 24px 34px;
+  height:100vh;
+  overflow-y:auto;
+}
+
+.admin-header h1{
+  margin:0 0 18px 0;
+  font-size:2.1em;
+  font-weight:700;
+}
+
+/* ===============================
+   Top bar (Search + Add)
+   =============================== */
+.tour-topbar{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow2);
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  margin-bottom: 18px;
+}
+
+.tour-search{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  flex: 1;
+  min-width: 260px;
+}
+
+.tour-search .search-input{
+  flex:1;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding: 12px 14px;
+  border:1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.tour-search .search-input i{
+  color: var(--muted);
+}
+
+.tour-search input{
+  border:none;
+  outline:none;
+  width:100%;
+  font-size: .98em;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.search-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-weight: 900;
+  cursor:pointer;
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  transition: .15s ease;
+}
+.search-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(34,48,74,.10);
+}
+
+.add-tour-btn{
+  border:none;
+  background: linear-gradient(135deg, var(--blue), var(--blue2));
+  color:#fff;
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-weight: 950;
+  cursor:pointer;
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  box-shadow: 0 12px 26px rgba(47,95,208,.25);
+  transition: .15s ease;
+}
+.add-tour-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(47,95,208,.30);
+}
+
+/* ===============================
+   Form card (Add/Edit)
+   =============================== */
+#tourFormCard{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow2);
+  margin-bottom: 18px;
+}
+
+.form-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.form-title h2{
+  margin:0;
+  font-size:1.15em;
+  font-weight: 950;
+  color: var(--navy);
+}
+
+.modal-close{
+  background:#f4f6fb;
+  border:1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor:pointer;
+  font-weight: 950;
+}
+
+.form-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom: 6px;
+  font-size: .92em;
+  font-weight: 900;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  outline:none;
+  background:#fff;
+  font-size: .96em;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+  border-color: rgba(47,95,208,.55);
+  box-shadow: 0 0 0 4px rgba(47,95,208,.12);
+}
+
+.form-actions{
+  grid-column: 1 / -1;
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.save-btn{
+  border:none;
+  background: linear-gradient(135deg, var(--blue), var(--blue2));
+  color:#fff;
+  border-radius: 12px;
+  padding: 11px 18px;
+  font-weight: 950;
+  cursor:pointer;
+}
+
+.cancel-btn{
+  border:1px solid var(--border);
+  background:#f4f6fb;
+  color: var(--navy);
+  border-radius: 12px;
+  padding: 11px 16px;
+  font-weight: 950;
+  cursor:pointer;
+}
+
+/* ===============================
+   Cards grid (Hotels-like)
+   =============================== */
+.tour-cards-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+/* Card */
+.tour-card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow2);
+  overflow:hidden;
+}
+
+/* Card header */
+.tour-card-header{
+  background: linear-gradient(135deg, var(--blue), var(--blue2));
+  color:#fff;
+  padding: 14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.tour-title{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 950;
+  font-size: 1.08em;
+  letter-spacing: .2px;
+}
+
+.tour-title i{
+  opacity: .95;
+}
+
+/* Status pill */
+.tour-pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.25);
+  font-weight: 900;
+  font-size: .92em;
+}
+
+.tour-pill .dot{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: #fff;
+  opacity: .95;
+}
+
+.tour-pill.active .dot{ background: #2bf09a; }
+.tour-pill.inactive .dot{ background: #ff6b6b; }
+
+/* Card body */
+.tour-card-body{
+  padding: 16px;
+}
+
+.info-row{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid #f0f3fa;
+  font-weight: 800;
+  color: var(--navy);
+}
+.info-row:last-child{ border-bottom:none; }
+
+.info-row i{
+  width: 22px;
+  color: var(--blue);
+}
+
+/* Actions footer */
+.tour-card-actions{
+  display:flex;
+  gap: 12px;
+  padding: 14px 16px 16px 16px;
+  border-top: 1px solid #f0f3fa;
+  background: #fff;
+}
+
+.btn{
+  flex:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 950;
+  text-decoration:none;
+  border: 1px solid transparent;
+  cursor:pointer;
+  transition: .15s ease;
+  user-select:none;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+}
+
+/* Edit */
+.btn-edit{
+  background: #eaf2ff;
+  color: var(--blue);
+  border-color: #d6e5ff;
+}
+.btn-edit:hover{ box-shadow: 0 10px 22px rgba(47,95,208,.14); }
+
+/* Toggle */
+.btn-toggle{
+  background: var(--warn-bg);
+  color: #b86a00;
+  border-color: #ffe1b5;
+}
+.btn-toggle:hover{ box-shadow: 0 10px 22px rgba(243,156,18,.18); }
+
+/* Delete */
+.btn-delete{
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: #ffd0d0;
+}
+.btn-delete:hover{ box-shadow: 0 10px 22px rgba(229,57,53,.18); }
+
+/* Disabled delete when Active */
+.btn-disabled{
+  opacity: .55;
+  pointer-events:none;
+  filter: grayscale(.1);
+}
+
+/* Toast helpers (hidden) */
+.alert-success, .alert-error{ display:none; }
+#customMessage{ pointer-events:none; }
+#customMessageBox{ pointer-events:auto; }
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 1050px){
+  .tour-cards-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px){
+  .admin-container{ flex-direction:column; height:auto; }
+  html, body{ overflow:auto; }
+  .sidebar{
+    width:100%;
+    height:auto;
+    border-radius: 0 0 18px 18px;
+  }
+  .sidebar-menu{
+    display:flex;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+  .sidebar-menu a{
+    border-left:none;
+    border-bottom: 4px solid transparent;
+    border-radius: 0 0 18px 18px;
+    padding: 12px 18px;
+  }
+  .sidebar-menu a.active{
+    border-bottom: 4px solid var(--sky);
+    padding-left: 18px;
+  }
+  .main-content{ height:auto; padding: 18px 12px; }
+  .form-container{ grid-template-columns: 1fr; }
+}

@@ -1,0 +1,68 @@
+/* bookingHistory.css - Styles for the booking history page */
+
+.booking-history-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.booking-history-title {
+    font-size: 2rem;
+    color: #1e88e5;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.booking-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    background: #fafafa;
+}
+
+.booking-history-table th, .booking-history-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.booking-history-table th {
+    background: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+.booking-history-table tr:hover {
+    background: #f1f8e9;
+}
+
+.booking-history-table a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.booking-history-table a:hover {
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .booking-history-container {
+        padding: 12px 2px;
+    }
+    .booking-history-title {
+        font-size: 1.3rem;
+    }
+    .booking-history-table th, .booking-history-table td {
+        font-size: 0.95rem;
+        padding: 8px 4px;
+    }
+}

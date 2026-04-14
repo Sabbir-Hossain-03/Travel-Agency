@@ -1,0 +1,182 @@
+.payment-form label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.08rem;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+.payment-form input[type="radio"] {
+    accent-color: #1976d2;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+}
+
+/* payment.css - Modern style for payment page */
+
+.payment-container {
+    max-width: 480px;
+    margin: 48px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10);
+    padding: 36px 28px 28px 28px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-title {
+    font-size: 2rem;
+    color: #1976d2;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.payment-form input,
+.payment-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border 0.2s;
+}
+
+.payment-form input:focus,
+.payment-form select:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+.payment-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.payment-form button:hover {
+    background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+}
+
+.payment-summary {
+    background: #f1f8e9;
+    border-left: 4px solid #43a047;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    color: #33691e;
+}
+
+@media (max-width: 600px) {
+    .payment-container {
+        padding: 14px 2px 18px 2px;
+    }
+
+    .payment-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Processing Overlay Styles */
+.processing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.processing-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.processing-card {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 32px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 480px;
+    width: 90%;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100001;
+}
+
+.processing-overlay.active .processing-card {
+    transform: scale(1) translateY(0);
+}
+
+.processing-icon {
+    font-size: 64px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.processing-title {
+    color: #1e293b;
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.processing-subtitle {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+}
+
+.progress-container {
+    height: 10px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00ADB5, #1e5ff7);
+    transition: width 10s linear;
+}
+
+.countdown-text {
+    font-weight: 600;
+    color: #00bcd4;
+    font-size: 0.95rem;
+}
